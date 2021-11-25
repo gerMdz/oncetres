@@ -202,3 +202,4 @@ fabric.properties
 /.env.local
 /.idea/
 /data/
+node_modules/
