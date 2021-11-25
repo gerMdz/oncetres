@@ -83,7 +83,7 @@ class AppFixtures extends Fixture
 
             foreach (range(1, 5) as $i) {
                 $comment = new Comment();
-                $comment->setAuthor($this->getReference('john_user'));
+                $comment->setAuthor($this->getReference('gerardo_user'));
                 $comment->setContent($this->getRandomText(random_int(255, 512)));
                 $comment->setPublishedAt(new \DateTime('now + '.$i.'seconds'));
 
@@ -100,9 +100,9 @@ class AppFixtures extends Fixture
     {
         return [
             // $userData = [$fullname, $username, $password, $email, $roles];
-            ['Jane Doe', 'jane_admin', 'kitten', 'jane_admin@symfony.com', ['ROLE_ADMIN']],
-            ['Tom Doe', 'tom_admin', 'kitten', 'tom_admin@symfony.com', ['ROLE_ADMIN']],
-            ['John Doe', 'john_user', 'kitten', 'john_user@symfony.com', ['ROLE_USER']],
+            ['Gerardo Montivero', 'gerardo_admin', 'N1nguna=', 'gerardo.montivero@gmail.com', ['ROLE_ADMIN']],
+//            ['Tom Doe', 'tom_admin', 'kitten', 'tom_admin@symfony.com', ['ROLE_ADMIN']],
+            ['Gerardo J. Montivero', 'gerardo_user', 'kitten', 'gmontivero@jus.mendoza.gov.ar', ['ROLE_USER']],
         ];
     }
 
@@ -133,7 +133,7 @@ class AppFixtures extends Fixture
                 $this->getPostContent(),
                 new \DateTime('now - '.$i.'days'),
                 // Ensure that the first post is written by Jane Doe to simplify tests
-                $this->getReference(['jane_admin', 'tom_admin'][0 === $i ? 0 : random_int(0, 1)]),
+                $this->getReference(['gerardo_admin', 'gerardo_admin'][0 === $i ? 0 : random_int(0, 1)]),
                 $this->getRandomTags(),
             ];
         }

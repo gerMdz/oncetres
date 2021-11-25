@@ -4,9 +4,11 @@
 # See https://symfony.com/doc/current/templates.html#rendering-a-template-directly-from-a-route
 homepage:
     path: /{_locale}
-    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+#    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+    controller: App\Controller\BlogController::index
     requirements:
         _locale: '%app_locales%'
     defaults:
-        template: default/homepage.html.twig
+#        template: default/homepage.html.twig
+        template: blog/index.html.twig
         _locale: '%locale%'
