@@ -203,3 +203,4 @@ fabric.properties
 /.idea/
 /data/
 node_modules/
+/.github/
