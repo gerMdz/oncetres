@@ -200,3 +200,4 @@ fabric.properties
 /var/
 /public/build/
 /.env.local
+/.idea/
