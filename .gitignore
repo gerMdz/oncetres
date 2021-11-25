@@ -201,3 +201,4 @@ fabric.properties
 /public/build/
 /.env.local
 /.idea/
+/data/
