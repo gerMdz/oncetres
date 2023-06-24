@@ -204,3 +204,4 @@ fabric.properties
 /data/
 node_modules/
 /.github/
+/migrations/Version20230624203549.php
